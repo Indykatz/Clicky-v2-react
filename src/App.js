@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import About from "./components/about";
+import Article from "./components/article";
+import Banner from "./components/banner";
+import NewsCarousel from "./components/carousel";
+import Contact from "./components/contact";
+import Enquiry from "./components/enquiry";
+import Footer from "./components/footer";
+import Header from "./components/header";
+import Topics from "./components/topics";
+import { AppStyles, ContentStyled } from "./styles/app.styled";
+import "./fonts/proximanova_semibold.woff2";
+import "./fonts/proximanova_regular.woff2";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppStyles>
+      <ContentStyled>
+        <Header />
+        <Banner />
+        <Article />
+        <NewsCarousel />
+        <Topics />
+        <About />
+        <Contact />
+        <Enquiry />
+        <Footer />
+      </ContentStyled>
+    </AppStyles>
   );
-}
+};
 
 export default App;
